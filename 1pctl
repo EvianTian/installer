@@ -3,6 +3,7 @@
 action=$1
 target=$2
 args=$@
+extra_args=("${@:3}")
 
 BASE_DIR=directory
 ORIGINAL_PORT=port
@@ -356,10 +357,10 @@ function update() {
     check_root
     case "${target}" in
         username)
-            1panel -l $LANGUAGE update username
+            1panel -l $LANGUAGE update username ${extra_args[@]}
             ;;
         password)
-            1panel -l $LANGUAGE update password
+            1panel -l $LANGUAGE update password ${extra_args[@]}
             ;;
         port)
             1panel -l $LANGUAGE update port
