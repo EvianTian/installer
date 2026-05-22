@@ -340,7 +340,7 @@ function reset() {
             1panel -l $LANGUAGE reset ips
             ;;
         mfa)
-            1panel -l $LANGUAGE reset mfa
+            1panel -l $LANGUAGE reset mfa ${extra_args[@]}
             ;;
         passkey)
             1panel -l $LANGUAGE reset passkey
